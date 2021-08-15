@@ -1,0 +1,174 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url(img/bck.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contenright .tex {
+   margin-right: 6rem;
+}
+.contenright .tex h1{
+    padding-top: 1px;
+    font-size: 55px !important;
+}
+
+.btn:hover{
+    background-color: rgb(152, 152, 252);
+    cursor: pointer;
+    border-color: rgb(152, 152, 252);
+    color: white;
+}
+
+.container footer .nav-item:hover{
+    color: white !important;
+}
+
+@media (max-width: 768px){
+    .contenright .tex {
+        margin-right: 2rem !important;
+        margin-top: 2rem;
+    }
+    .contenright .tex h1{
+        padding-top: 1px;
+        font-size: 45px !important;
+    }
+
+    .contenyt .jdl{
+        width: 50%;
+    }
+
+    .vid .youtube {
+        justify-content: center;
+        width: 620px;
+        height: 360px;
+        margin-right: 3rem;
+    }
+    .foter footer span{
+        font-size: 12px;
+    }
+    .foter footer span a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 576px){
+    .contenright .tex {
+        margin-top: 2rem;
+        margin-left: 1rem !important;
+    }
+    .contenright .tex h1{
+        padding-top: 1px;
+        font-size: 40px !important;
+    }
+
+    .contenleft{
+        margin-left: 1rem !important;
+    }
+    .contenyt .jdl{
+        width: 80%;
+    }
+
+    .vid .youtube {
+        justify-content: center;
+        width: 480px;
+        height: 280px;
+    }
+    .foter footer span{
+        font-size: 12px;
+    }
+    .foter footer span a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 470px){
+    .contenright .tex {
+        margin-top: 2rem;
+        margin-left: 1px !important;
+    }
+    .contenright .tex h1{
+        padding-top: 1px;
+        font-size: 25px !important;
+    }
+    .contenleft{
+        width: 80% !important;
+    }
+    .contenyt .jdl{
+        width: 80%;
+    }
+    .vid .youtube {
+        justify-content: center;
+        width: 280px;
+        height: 144px;
+    }
+    .foter footer span{
+        font-size: 12px;
+    }
+    .foter footer span a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .contenright{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem !important;
+    }
+    .contenright .tex{
+        width: 100% !important;
+        margin: 5px 5px;
+        float: left !important;
+    }
+    .contenright .tex .buton .btn{
+        font-size: 15px !important;
+        padding: 5px 5px !important;
+        font-weight: bolder;
+        margin-top: 2rem !important;
+    }
+    .contenright .tex .fw-bold{
+        font-size: 30px !important ;
+    }
+    .contenleft{
+        margin-top: -8rem;
+        margin-left: -2rem !important;
+        width: 90% !important;
+    }
+    .contenleft .tex1 h2{
+        font-size: 20px !important ;
+    }
+    .contenleft .tex1 .bodytex{
+        font-size: 14px !important ;
+    }
+    .contenyt{
+        width: 90% !important;
+    }
+    .contenyt .jdl h4{
+        font-size: 18px ;
+    }
+    .contenyt .jdl span{
+        font-size: 14px;
+    }
+    .vidyt {
+        margin-left: -1rem;
+    }
+    .vidyt .vid h4{
+        font-size: 18px;
+    }
+    .foter footer p{
+        font-size: 10px !important;
+    }
+    .foter footer span{
+        font-size: 12px;
+    }
+    .foter footer span a{
+        text-decoration: none;
+    }
+}
