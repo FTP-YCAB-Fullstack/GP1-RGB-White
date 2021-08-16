@@ -1,0 +1,78 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(assets/bck.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Navbar start */
+.navbar .container {
+  background-color: rgba(196, 196, 196, 17%);
+  justify-content: space-between !important;
+  align-items: center;
+  max-width: 100%;
+  margin: 0px;
+  margin-right: 0px;
+}
+
+.navbar .h1 a {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0px 10px 10px #000000;
+}
+.navbar {
+  margin: 0px;
+}
+/* Navbar End */
+
+/* Content Start*/
+.content .container input {
+  background-color: rgba(196, 196, 196, 29%);
+  max-width: 75%;
+  width: 966px;
+  height: 102px;
+  position: fixed;
+  top: 50%;
+  border: none;
+  border-radius: 45px;
+}
+.content .container label {
+    max-width: 75%;
+    width: 966px;
+    height: 102px;
+    position: fixed;
+    top: 45%;
+    right: -10%;
+    font-size: 2vmax;
+  }
+
+
+::placeholder {
+  color: #ffffff !important;
+  align-items: center;
+}
+input[type="text"] {
+  color: #ffffff !important;
+  padding-left: 2.5%;
+  font-size: 200%;
+  align-items: center;
+}
+/* Content End */
+
+/* Footer Start */
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* Footer End */
+
+.footer {
+  background-color: rgba(196, 196, 196, 7%);
+}
