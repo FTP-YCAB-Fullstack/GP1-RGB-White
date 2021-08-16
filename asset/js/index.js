@@ -23,17 +23,49 @@ function apiGet(method, query) {
 
 const dataLength = 6;//display data count
 
-let offset;
-let lon;
-let lat;
+let offset=0;
+let lon=0;
+let lat=0;
+let count = 0;
+
+function showDetailsData(data) {
+    let det = document.getElementById("detail");
+    det.innerHTML = "";
+    if (data.preview) {
+        det.innerHTML += `<img src="${data.preview.source}">`;
+    }
+    det.innerHTML += data.wikipedia_extracts
+        ? data.wikipedia_extracts.html
+        : data.info
+            ? data.info.descr
+            : "No description";
+
+    det.innerHTML += `<p> location: </p> 
+                <p>Country: ${data.address.country}</p>
+                <p>Country Code: ${data.address.country_code}</p>
+                <p>County: ${data.address.county}</p>
+                <p>PostCode: ${data.address.postcode}</p>
+                <p>Road: ${data.address.road}</p>
+                <p>State:${data.address.state}</p>`
+
+    det.innerHTML += `<p><a target="_blank" href="${data.otm}">Open In Map</a></p>`;
+    console.log(data)
+}
 
 //function create element dom for dinamic data
 function createItemList(item) {
     let a = document.createElement("a");
     a.className = "list-group-item list-group-item-action";
     a.setAttribute("data-id", item.xid);
-    a.innerHTML = `<h5">${item.name}</h5>
-      <p>${getCategoryName(item.kinds)}</p>`;
+    a.innerHTML = `<p>${getCategoryName(item.kinds)}</p><h5">${item.name}</h5>`;
+    a.addEventListener("click", function () {
+        document.querySelectorAll("#list a").forEach(function (item) {
+            item.classList.remove("active");
+        });
+        this.classList.add("active");
+        let xid = this.getAttribute("data-id");
+        apiGet("xid/" + xid).then(data => showDetailsData(data));
+    });
     return a;
 }
 
@@ -41,12 +73,19 @@ function createItemList(item) {
 function loadList() {
     apiGet(
         "radius",
-        `radius=10000&limit=${dataLength}&offset=${offset}&lon=${lon}&lat=${lat}&rate=2&format=json`
+        `radius=50000&limit=${dataLength}&offset=${offset}&lon=${lon}&lat=${lat}&rate=2&format=json`
     ).then(function (data) {
         let list = document.getElementById("list");
         list.innerHTML = "";
         data.forEach(item => list.appendChild(createItemList(item)));
         console.log(data)
+        let nextBtn = document.getElementById("next-button");
+        if (count < offset + dataLength) {
+            nextBtn.style.visibility = "hidden";
+        } else {
+            nextBtn.style.visibility = "visible";
+            nextBtn.innerText = `Next (${offset + dataLength} of ${count})`;
+        }
        
     });
 }
@@ -56,19 +95,17 @@ function loadList() {
 function loadItemData() {//use dataLength for limit display data
     apiGet(
         "radius",
-        `radius=1000&limit=${dataLength}&offset=${offset}&lon=${lon}&lat=${lat}&rate=2&format=count`
+        `radius=50000&limit=${dataLength}&offset=${offset}&lon=${lon}&lat=${lat}&rate=2&format=count`
     ).then(function (data) {
         // console.log(data)
         count = data.count;
         offset = 0;
         document.getElementById(
             "info"
-        )
+        ).innerHTML += `<p>${count} rekomendasi`
         loadList();
     });
 }
-
-
 
 document
     .getElementById("form-search")
@@ -86,4 +123,11 @@ document
             document.getElementById("info").innerHTML = `<p>${message}</p>`;
         });
         event.preventDefault();
+    });
+
+document
+    .getElementById("next-button")
+    .addEventListener("click", function(){
+        offset += dataLength;
+        loadList();
     });
