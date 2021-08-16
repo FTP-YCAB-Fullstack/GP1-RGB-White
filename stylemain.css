@@ -10,6 +10,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.content {
+  height: 100vh;
+}
 
 /* Navbar start */
 .navbar .container {
@@ -32,26 +35,25 @@ body {
 /* Navbar End */
 
 /* Content Start*/
+.content .container {
+  height: 100%;
+}
 .content .container input {
   background-color: rgba(196, 196, 196, 29%);
   max-width: 75%;
   width: 966px;
   height: 102px;
-  position: fixed;
-  top: 50%;
   border: none;
+  font-size: 2vmax;
   border-radius: 45px;
 }
 .content .container label {
-    max-width: 75%;
-    width: 966px;
-    height: 102px;
-    position: fixed;
-    top: 45%;
-    right: -10%;
-    font-size: 2vmax;
-  }
-
+  margin-right: 3%;
+  max-width: 75%;
+  text-align: end;
+  width: 966px;
+  font-size: 2vmax;
+}
 
 ::placeholder {
   color: #ffffff !important;
@@ -67,7 +69,6 @@ input[type="text"] {
 
 /* Footer Start */
 .footer {
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
