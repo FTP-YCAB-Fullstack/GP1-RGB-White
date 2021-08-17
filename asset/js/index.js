@@ -32,7 +32,7 @@ function showDetailsData(data) {
     let det = document.getElementById("detail");
     det.innerHTML = "";
     if (data.preview) {
-        det.innerHTML += `<img src="${data.preview.source}">`;
+        det.innerHTML += `<img class="card-img-top" src="${data.preview.source}">`;
     }
     det.innerHTML += data.wikipedia_extracts
         ? data.wikipedia_extracts.html
@@ -57,7 +57,21 @@ function createItemList(item) {
     let a = document.createElement("a");
     a.className = "list-group-item list-group-item-action";
     a.setAttribute("data-id", item.xid);
-    a.innerHTML = `<p>${getCategoryName(item.kinds)}</p><h5">${item.name}</h5>`;
+    a.innerHTML = `<p>${getCategoryName(item.kinds)}</p><h5">${item.name}</h5>
+        `;
+
+    // let listData = document.getElementById("listData");
+    // listData.innerHTML="";
+    let xid = item.xid;
+    // apiGet("xid/" + xid).then(data => listData.appendChild(showDetailsData(data)));
+    
+    // let p = document.createElement("p")
+    // let xid = item.xid;
+    // apiGet("xid/" + xid).then(data => listData.appendChild(showDetailsData(data)));
+
+    // let b = document.createElement("p");
+    // b.innerHTML = apiGet("xid/" + xid).then(data => showDetailsData(data));
+
     a.addEventListener("click", function () {
         document.querySelectorAll("#list a").forEach(function (item) {
             item.classList.remove("active");
