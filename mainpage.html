@@ -23,6 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="stylemain.css" />
+    <link rel="stylesheet" href="box.css">
   </head>
   <body>
     <!-- Navbar Start -->
@@ -45,14 +46,72 @@
         <label for="exampleFormControlInput1" class="form-label text-light"
           >Search All Over Indonesia</label
         >
-        <input
+        <!-- <input
           class="form-control"
           type="text"
           placeholder="Input Keyword"
           aria-label="default input example"
-        />
+        /> -->
+        <!--innput-->
+        <form id="form-search">
+          <div>
+              <button id="button-search" type="submit">
+              </button>
+          </div>
+          <input id="textbox" type="search" placeholder="Masukkan data yang akan anda cari">
+      </form>
+  
+      <div id="info"></div>
+      
+  
+  
+      <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <div id="list"></div>
+                  <nav>
+                      <button id="next-button" type="button">
+                          Next
+                      </button>
+                  </nav>
+                  <div id="listData"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div id="detail" class="row grid-x grid-padding-x align-center-middle text-center"></div>
+                  <p id="detail"></p>
+            </div>
+        </div>
+
+
       </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+      <!-- <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <div id="list"></div>
+                  <nav>
+                      <button id="next-button" type="button">
+                          Next
+                      </button>
+                  </nav>
+                  <div id="listData"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div id="detail" class="row grid-x grid-padding-x align-center-middle text-center"></div>
+                  <p id="detail"></p>
+            </div>
+      </div> -->
     <!-- Content End -->
 
     <!-- Footer Start -->
@@ -84,5 +143,9 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
+    <!--script api-->
+    <script src="/asset/js/index.js"></script>
+    <!--language api en(english render)-->
+    <script type="text/javascript" src="https://opentripmap.io/js/directory.en.js"></script>
   </body>
 </html>
