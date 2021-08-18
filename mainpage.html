@@ -24,6 +24,9 @@
     />
     <link rel="stylesheet" href="stylemain.css" />
     <link rel="stylesheet" href="box.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -53,36 +56,62 @@
           aria-label="default input example"
         /> -->
         <!--innput-->
-        <form id="form-search">
+      <form id="form-search">
           <div>
               <button id="button-search" type="submit">
               </button>
           </div>
-          <input id="textbox" type="search" placeholder="Masukkan data yang akan anda cari">
+          <input id="textbox" class="form-control" type="search" autocomplete="off" placeholder="Masukkan data yang akan anda cari">
       </form>
-  
-      <div id="info"></div>
       
-  
-  
-      <div class="card-group">
-          <div class="card">
-            <div class="card-body">
-              <div id="list"></div>
-                  <nav>
-                      <button id="next-button" type="button">
-                          Next
-                      </button>
-                  </nav>
-                  <div id="listData"></div>
+      <div id="info" class="info"></div>
+        <div class="content">
+            <div class="col-9 col-lg-6">
+                <div id="list" class="list">
+                    <!-- <a href="#myMoodal" class="btn " id="an" data-toggle="modal" data-target="#myModal"></a> -->
+                </div>
+                <nav class="btn-1">
+                    <button id="next-button" class="btn btn-primary" type="button" style="visibility: hidden;">
+                        Next
+                    </button>
+                </nav>
+                <nav class="btn-2">
+                    <button id="previous-button" class="btn btn-primary" type="button" style="visibility: hidden;">
+                        Previous
+                    </button>
+                </nav>
+                <div id="listData"></div>
+           
+            <!-- <p id="listData"></p> -->
+        </div>     
+        </div>
+        <!-- <div class="fit">
+            <div class="card" style="width: 39rem;">
+                <div id="detail" class="row grid-x grid-padding-x align-center-middle text-center"></div>
+                <p id="detail"></p>
+            </div>
+            <p></p>
+        </div> -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                  <!-- <h4 class="modal-title"></h4> -->
+                </div>
+                <div class="modal-body">
+                    <div id="detail" class="row grid-x grid-padding-x align-center-middle text-center"></div>
+                    <p id="detail"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <div id="detail" class="row grid-x grid-padding-x align-center-middle text-center"></div>
-                  <p id="detail"></p>
-            </div>
-        </div>
 
 
       </div>
