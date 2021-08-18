@@ -79,6 +79,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.container-left .tex1 .bodytex,
+.contenyt .jdl p {
+  /* background-color: rgba(196, 196, 196, 17%); */
+  font-weight: 700;
+  -webkit-text-stroke: #000000;
+  -webkit-text-stroke-width: 0.2px;
+}
 
 @media (max-width: 900px) {
   .container-content {
@@ -91,9 +98,10 @@ body {
     margin-right: 3rem;
   }
 
-.contenleft{
-  margin-left: 3rem;
-}
+  .contenleft {
+    padding-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
   .container-left .tex1,
   .contenyt .jdl p {
     width: 85%;
@@ -102,7 +110,8 @@ body {
     margin: auto;
   }
 
-  .tex h1, .contenright .btn {
+  .tex h1,
+  .contenright .btn {
     margin-left: 10%;
     text-align: center;
   }
@@ -119,9 +128,6 @@ body {
   .contenright .tex h1 {
     padding-top: 1px;
     font-size: 45px !important;
-  }
-
-  .contenyt .jdl {
   }
 
   .vid .youtube {
@@ -150,6 +156,9 @@ body {
 
   .contenleft {
     margin-left: rem !important;
+  }
+  .contenright .btn {
+    margin-right: 35% !important;
   }
   .contenyt .jdl {
     width: 100%;
@@ -180,6 +189,9 @@ body {
   .contenleft {
     width: 80% !important;
   }
+  .contenright .btn {
+    margin-right: 30% !important;
+  }
   .contenyt .jdl {
     width: 80%;
   }
@@ -207,6 +219,9 @@ body {
     margin: 5px 5px;
     float: left !important;
   }
+  .contenright .btn {
+    margin-right: 30% !important;
+  }
   .contenright .tex .buton .btn {
     font-size: 15px !important;
     padding: 5px 5px !important;
@@ -216,11 +231,11 @@ body {
   .contenright .tex .fw-bold {
     font-size: 30px !important ;
   }
-  .contenleft {
+  /* .contenleft {
     margin-top: -8rem;
     margin-left: -2rem !important;
     width: 90% !important;
-  }
+  } */
   .contenleft .tex1 h2 {
     font-size: 20px !important ;
   }
@@ -238,6 +253,11 @@ body {
   }
   .vidyt {
     margin-left: -1rem;
+  }
+  .vid .youtube {
+    justify-content: center;
+    width: 240px;
+    height: 120px;
   }
   .vidyt .vid h4 {
     font-size: 18px;

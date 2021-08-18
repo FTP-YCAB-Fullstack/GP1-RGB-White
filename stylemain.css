@@ -38,7 +38,7 @@ body {
 .content .container {
   height: 100%;
 }
-.content .container input {
+.content .container input, form {
   background-color: rgba(196, 196, 196, 29%);
   max-width: 75%;
   width: 966px;
@@ -59,7 +59,7 @@ body {
   color: #ffffff !important;
   align-items: center;
 }
-input[type="text"] {
+input[type="search"] {
   color: #ffffff !important;
   padding-left: 2.5%;
   font-size: 200%;
