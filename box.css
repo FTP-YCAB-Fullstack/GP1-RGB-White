@@ -17,7 +17,17 @@ img {
 
 .content1{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
+.prev{
+    margin-top: -1rem;
+
+}
+
+/* .listData:hover{
+    background-color: rgb(196, 148, 148);
+} */
 /* .form-search{
     display: flex;
 } */
