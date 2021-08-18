@@ -10,6 +10,14 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.container-content {
+  width: auto;
+}
+
+.container-left .tex1,
+.contenyt .jdl p {
+  width: 50%;
+}
 
 /* Navbar start */
 .navbar .container {
@@ -32,9 +40,16 @@ body {
 /* Navbar End */
 
 /* Footer Start */
+.container-footer {
+  margin: 0;
+  margin-top: 3%;
+}
 .foter {
   width: 100%;
+  height: 100hv;
   bottom: 0;
+  left: 0;
+  margin-top: 3hv;
 }
 .foter {
   background-color: rgba(196, 196, 196, 7%);
@@ -46,7 +61,7 @@ body {
 }
 .contenright .tex h1 {
   padding-top: 1px;
-  font-size: 55px !important;
+  font-size: 75px !important;
 }
 
 .btn:hover {
@@ -60,6 +75,42 @@ body {
   color: white !important;
 }
 
+.container-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .container-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-left {
+    text-align: center;
+    justify-items: center;
+    margin-right: 3rem;
+  }
+
+.contenleft{
+  margin-left: 3rem;
+}
+  .container-left .tex1,
+  .contenyt .jdl p {
+    width: 85%;
+    justify-self: center;
+    text-align: center;
+    margin: auto;
+  }
+
+  .tex h1, .contenright .btn {
+    margin-left: 10%;
+    text-align: center;
+  }
+  .contenright .btn {
+    margin-right: 35%;
+  }
+}
+
 @media (max-width: 768px) {
   .contenright .tex {
     margin-right: 2rem !important;
@@ -71,14 +122,13 @@ body {
   }
 
   .contenyt .jdl {
-    width: 50%;
   }
 
   .vid .youtube {
     justify-content: center;
-    width: 620px;
-    height: 360px;
-    margin-right: 3rem;
+    width: 360px;
+    height: 180px;
+    margin-right: rem;
   }
   .foter footer span {
     font-size: 12px;
@@ -99,16 +149,16 @@ body {
   }
 
   .contenleft {
-    margin-left: 1rem !important;
+    margin-left: rem !important;
   }
   .contenyt .jdl {
-    width: 80%;
+    width: 100%;
   }
 
   .vid .youtube {
     justify-content: center;
-    width: 480px;
-    height: 280px;
+    width: 360px;
+    height: 180px;
   }
   .foter footer span {
     font-size: 12px;
