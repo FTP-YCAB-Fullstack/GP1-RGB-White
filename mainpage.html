@@ -30,15 +30,11 @@
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="navbar navbar-dark bg-transparent d-flex">
-      <div class="container">
-        <span
-          class="h1"
-          style="font-family: 'Montserrat Alternates', sans-serif"
-        >
-          <a href="index.html">ColorTravel </a></span
-        >
-        <span class="h1"><a href="about-us.html"> About Us</a></span>
+    <nav class="navbar navbar-dark d-flex">
+      <div class="container d-flex ">
+        <span class="h4" style="font-family: 'Montserrat Alternates', sans-serif; font-size: 22px;">
+          <a href="index.html" style="text-decoration: none; color: white;">ColorTravel </a></span>
+        <!-- <span class="h5"><a href="about-us.html"> About Us</a></span> -->
       </div>
     </nav>
     <!-- Navbar End -->
@@ -46,26 +42,19 @@
     <!-- Content Start -->
     <div class="content">
       <div class="container d-flex flex-column justify-content-center align-items-center">
-        <label for="exampleFormControlInput1" class="form-label text-light"
-          >Search All Over Indonesia</label
-        >
-        <!-- <input
-          class="form-control"
-          type="text"
-          placeholder="Input Keyword"
-          aria-label="default input example"
-        /> -->
-        <!--innput-->
+        <h3 for="exampleFormControlInput1" class="form-label fw-bold text-light"
+          >Search All Over Indonesia</h3>
+          
       <form id="form-search">
-          <div>
-              <button id="button-search" type="submit">
-              </button>
-          </div>
+        <div>
+          <!-- <button id="button-search" type="submit"></button> -->
           <input id="textbox" class="form-control" type="search" autocomplete="off" placeholder="Masukkan data yang akan anda cari">
+        </div>
+        <span style="color: white;">*please enter for search</span>
       </form>
       
       <div id="info" class="info"></div>
-        <div class="content">
+        <div class="content1">
             <div class="col-9 col-lg-6">
                 <div id="list" class="list">
                     <!-- <a href="#myMoodal" class="btn " id="an" data-toggle="modal" data-target="#myModal"></a> -->
@@ -116,11 +105,11 @@
 
       </div>
     </div>
+    <!-- <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
+    <br> -->
 
 
       <!-- <div class="card-group">
@@ -144,7 +133,7 @@
     <!-- Content End -->
 
     <!-- Footer Start -->
-    <div class="container d-flex">
+    <div class="containerfooter d-flex">
     <div class="footer mt-5 mb-2 text-center">
       <footer>
         <h5 class=" justify-content-center mb-1" style="color: #ffffff">
@@ -165,6 +154,7 @@
       </footer>
     </div>
     </div>
+    
     <!-- Footer End -->
     <!-- Script bundel bootstrap -->
     <script
