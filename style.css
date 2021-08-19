@@ -1,4 +1,4 @@
-* {
+*{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -54,7 +54,7 @@ body {
 .foter {
   background-color: rgba(196, 196, 196, 7%);
 }
-/* Footer End */
+/* Footer End*/
 
 .contenright .tex {
   margin-right: 6rem;
