@@ -120,7 +120,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .contenright .tex {
     margin-right: 2rem !important;
     margin-top: 2rem;
