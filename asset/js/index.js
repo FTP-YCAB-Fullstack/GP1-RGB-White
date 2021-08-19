@@ -133,7 +133,7 @@ function loadItemData() {//use dataLength for limit display data
         offset = 0;
         document.getElementById(
             "info"
-        ).innerHTML += `<p>${count} Rwcommendation`
+        ).innerHTML += `<p>${count} Recommendation`
         loadList();
     });
 }
