@@ -1,5 +1,5 @@
 const apiKey = "5ae2e3f221c38a28845f05b6619b387f994edf13cd3ab04e10bbcef9";
-
+//radiud jangkauan data 50000m atau 50km
 //function to get url api and api key by place
 function apiGet(method, query) {
     return new Promise(function (resolve) {
@@ -14,8 +14,8 @@ function apiGet(method, query) {
         fetch(otmAPI)
             .then(response => response.json())//json response output
             .then(data => resolve(data))
-            .catch(function (err) {//error handling
-                console.log("Error :-S", err);
+            .catch(function (err) {
+                console.log("Error :-S", err);//display error
             });
     });
     // console.log(data)
@@ -59,27 +59,12 @@ function showDetailsData(data) {
 function createItemList(item) {
     let a = document.createElement("button");
     a.className = "list-group-item list-group-item-action";
-    // a.href="#mymodal"
-    // a.classList.toggle("modal")
-    // a.dataset.target= "#myModal"
     a.dataset.target = "#myModal"
     a.dataset.toggle = "modal"
     a.setAttribute("data-id", item.xid);
-    // let a = document.getElementById("an")
     a.innerHTML = `<p>${getCategoryName(item.kinds)}</p><h5">${item.name}</h5>
         `;
-
-    // let listData = document.getElementById("listData");
-    // listData.innerHTML="";
     let xid = item.xid;
-    // apiGet("xid/" + xid).then(data => listData.appendChild(showDetailsData(data)));
-    
-    // let p = document.createElement("p")
-    // let xid = item.xid;
-    // apiGet("xid/" + xid).then(data => listData.appendChild(showDetailsData(data)));
-
-    // let b = document.createElement("p");
-    // b.innerHTML = apiGet("xid/" + xid).then(data => showDetailsData(data));
 
     a.addEventListener("click", function () {
         document.querySelectorAll("#list button").forEach(function (item) {

@@ -10,6 +10,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 /* Navbar start */
 .navbar .container {
   background-color: rgba(196, 196, 196, 17%);
@@ -44,9 +45,7 @@ body {
 
 /* Footer Start */
 .footer {
-
   /* position: fixed; */
-
   width: 100%;
   height: 100hv;
   right: 0;
@@ -54,6 +53,7 @@ body {
   left: 0;
   margin-top: 3hv;
 }
+
 .footer {
   background-color: rgba(196, 196, 196, 7%);
 }
@@ -64,6 +64,9 @@ body {
   padding-left: 2rem;
 }
 
+
+@media (min-width: 610px) {
+=======
 @media (max-width: 780px){
 .row {
   margin-right: auto;
@@ -71,11 +74,13 @@ body {
 }
 
 /* @media (min-width: 610px) {
+
   .teks {
     padding-top: 2rem;
     padding-left: 7rem;
   }
 }
+
 @media (max-width: 610px) {
   .profil h5 {
     font-size: 14px;
