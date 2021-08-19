@@ -263,9 +263,15 @@ body {
     font-size: 18px;
   }
   .foter footer p {
-    font-size: 10px !important;
+    font-size: 8px !important;
   }
   .foter footer span {
+    font-size: 15px;
+  }
+  .foter footer img{
+    width: 25px;
+  }
+  .foter footer h5{
     font-size: 12px;
   }
   .foter footer span a {

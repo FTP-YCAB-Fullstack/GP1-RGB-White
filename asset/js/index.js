@@ -30,6 +30,8 @@ let count = 0;
 
 function showDetailsData(data) {
     let det = document.getElementById("detail");
+    let des = document.getElementById("modal-header")
+    des.innerHTML="";
     det.innerHTML = "";
     if (data.preview) {
         det.innerHTML += `<img class="card-img-top" src="${data.preview.source}">`;
@@ -47,6 +49,7 @@ function showDetailsData(data) {
                 <p>PostCode: ${data.address.postcode}</p>
                 <p>Road: ${data.address.road}</p>
                 <p>State:${data.address.state}</p>`
+    des.innerHTML += `<h4 class="modal-title">${data.name}</h4>`
 
     det.innerHTML += `<p><a target="_blank" href="${data.otm}">Open In Map</a></p>`;
     console.log(data)
@@ -54,9 +57,15 @@ function showDetailsData(data) {
 
 //function create element dom for dinamic data
 function createItemList(item) {
-    let a = document.createElement("a");
+    let a = document.createElement("button");
     a.className = "list-group-item list-group-item-action";
+    // a.href="#mymodal"
+    // a.classList.toggle("modal")
+    // a.dataset.target= "#myModal"
+    a.dataset.target = "#myModal"
+    a.dataset.toggle = "modal"
     a.setAttribute("data-id", item.xid);
+    // let a = document.getElementById("an")
     a.innerHTML = `<p>${getCategoryName(item.kinds)}</p><h5">${item.name}</h5>
         `;
 
@@ -73,7 +82,7 @@ function createItemList(item) {
     // b.innerHTML = apiGet("xid/" + xid).then(data => showDetailsData(data));
 
     a.addEventListener("click", function () {
-        document.querySelectorAll("#list a").forEach(function (item) {
+        document.querySelectorAll("#list button").forEach(function (item) {
             item.classList.remove("active");
         });
         this.classList.add("active");
@@ -94,11 +103,19 @@ function loadList() {
         data.forEach(item => list.appendChild(createItemList(item)));
         console.log(data)
         let nextBtn = document.getElementById("next-button");
-        if (count < offset + dataLength) {
+        if (count < dataLength) {
             nextBtn.style.visibility = "hidden";
         } else {
             nextBtn.style.visibility = "visible";
             nextBtn.innerText = `Next (${offset + dataLength} of ${count})`;
+        }
+        //previus
+        let preBtn = document.getElementById("previous-button");
+        if (count < dataLength) {
+            preBtn.style.visibility = "hidden";
+        } else {
+            preBtn.style.visibility = "visible";
+            preBtn.innerText = `Previous (${offset - dataLength} of ${count})`;
         }
        
     });
@@ -116,7 +133,7 @@ function loadItemData() {//use dataLength for limit display data
         offset = 0;
         document.getElementById(
             "info"
-        ).innerHTML += `<p>${count} rekomendasi`
+        ).innerHTML += `<p>${count} Recommendation`
         loadList();
     });
 }
@@ -143,5 +160,11 @@ document
     .getElementById("next-button")
     .addEventListener("click", function(){
         offset += dataLength;
+        loadList();
+    });
+document
+    .getElementById("previous-button")
+    .addEventListener("click", function(){
+        offset -= dataLength;
         loadList();
     });
