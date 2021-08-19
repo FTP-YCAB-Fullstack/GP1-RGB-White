@@ -108,10 +108,15 @@ function loadList() {
         } else {
             nextBtn.style.visibility = "visible";
             nextBtn.innerText = `Next (${offset + dataLength} of ${count})`;
+            if (dataLength + offset>=count) {
+                nextBtn.disabled = true;
+            }else if (dataLength + offset <= count) {
+                nextBtn.disabled =false;
+            }
         }
         //previus
         let preBtn = document.getElementById("previous-button");
-        if (count < dataLength) {
+        if (offset - dataLength<0) {
             preBtn.style.visibility = "hidden";
         } else {
             preBtn.style.visibility = "visible";
