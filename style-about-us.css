@@ -32,6 +32,10 @@ body {
 /* Navbar End */
 
 /* Content start */
+.card{
+  background-color: rgba(253, 203, 110,0.5) !important;
+}
+
 .contribute a {
   color: #ffffff;
   text-decoration: none;
@@ -41,8 +45,13 @@ body {
 
 /* Footer Start */
 .footer {
+  /* position: fixed; */
   width: 100%;
+  height: 100hv;
+  right: 0;
   bottom: 0;
+  left: 0;
+  margin-top: 3hv;
 }
 
 .footer {
@@ -55,7 +64,17 @@ body {
   padding-left: 2rem;
 }
 
+
 @media (min-width: 610px) {
+=======
+@media (max-width: 780px){
+.row {
+  margin-right: auto;
+}
+}
+
+/* @media (min-width: 610px) {
+
   .teks {
     padding-top: 2rem;
     padding-left: 7rem;
@@ -93,4 +112,4 @@ body {
   .profil .namee .ganda .tex h6 {
     font-size: 13px;
   }
-}
+} */
