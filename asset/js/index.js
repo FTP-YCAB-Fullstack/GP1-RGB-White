@@ -14,8 +14,8 @@ function apiGet(method, query) {
         fetch(otmAPI)
             .then(response => response.json())//json response output
             .then(data => resolve(data))
-            .catch(function (err) {//error handling
-                console.log("Error :-S", err);
+            .catch(function (err) {
+                console.log("Error :-S", err);//display error
             });
     });
     // console.log(data)

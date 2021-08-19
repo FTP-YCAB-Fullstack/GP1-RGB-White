@@ -12,6 +12,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 .content {
   height: auto;
 }
@@ -20,12 +21,14 @@ body {
 .navbar{
   margin: 0px;
 }
+
 .navbar .contain{
   display: flex;
   justify-content: space-around;
   width: 100%;
   background-color: rgba(196, 196, 196, 17%);
 }
+
 .navbar .contain a{
   margin: 0px !important;
   text-decoration: none;
@@ -43,12 +46,14 @@ body {
   background-color: rgba(118, 155, 255, 0.815);
   border-radius: 10px;
 }
+
 .log h1{
   color: white;
   font-family: 'Barlow', sans-serif;
   font-size: 40px;
   margin: 1rem 1rem;
 }
+
 .log span img{
   width: 50px;
 }
@@ -61,6 +66,7 @@ body {
   width: 100%;
   border-radius: 20px;
 }
+
 .search{
   margin-top: 2rem;
   display: flex;
@@ -70,10 +76,12 @@ body {
   height: 6rem;
   border-radius: 12px;
 }
+
 .search img{
   margin-left: 1rem;
   padding-right: 1rem;
-  /* background-color: red; */
+  /* bac
+  kground-color: red; */
 }
 .content .container input {
   margin: 1rem 0px ;
@@ -86,13 +94,6 @@ body {
   box-shadow: none;
 }
 
-/* input[type="text"] {
-  color: #ffffff !important;
-  padding-left: 2.5%;
-  font-size: 200%;
-  align-items: center;
-} */
-
 /* Content End */
 
 /* Footer Start */
@@ -102,8 +103,5 @@ body {
   display: flex;
   justify-content: center;
 }
-/* .footer {
-  background-color: rgba(196, 196, 196, 7%);
-} */
 /* Footer End */
 

@@ -153,7 +153,6 @@ img {
       }
 }
 
-
 @media(max-width: 380px) {
     .navbar .contain span{
         font-size: 22px !important;
