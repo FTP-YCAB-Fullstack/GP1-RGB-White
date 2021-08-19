@@ -18,7 +18,6 @@ function apiGet(method, query) {
                 console.log("Error :-S", err);//display error
             });
     });
-    // console.log(data)
 }
 
 const dataLength = 6;//display data count
@@ -52,7 +51,7 @@ function showDetailsData(data) {
     des.innerHTML += `<h4 class="modal-title">${data.name}</h4>`
 
     det.innerHTML += `<p><a target="_blank" href="${data.otm}">Open In Map</a></p>`;
-    console.log(data)
+    // console.log(data)
 }
 
 //function create element dom for dinamic data
@@ -118,7 +117,6 @@ function loadItemData() {//use dataLength for limit display data
         "radius",
         `radius=50000&limit=${dataLength}&offset=${offset}&lon=${lon}&lat=${lat}&rate=2&format=count`
     ).then(function (data) {
-        // console.log(data)
         count = data.count;
         offset = 0;
         document.getElementById(
